@@ -1,10 +1,10 @@
 SRC = presentation.md
-FILES += $(patsubst %.md, %.pdf, $(wildcard *.md))
+FILES += $(patsubst %.md, %.tex, $(wildcard *.md))
 FILES += $(patsubst %.md, %.html, $(wildcard *.md))
 
 FILTERS =
 PDF_ENGINE =
-PDF_OPTIONS =
+PDF_OPTIONS = -s
 PDF_FORMAT_OPTIONS = -t beamer --slide-level=2
 
 FILTERS += --citeproc
@@ -14,7 +14,7 @@ PDF_OPTIONS += --number-sections
 
 REVEALJS_THEME = beige
 
-%.pdf: %.md
+%.tex: %.md
 	-@pandoc "$<" $(FILTERS) $(PDF_ENGINE) $(PDF_OPTIONS) $(PDF_FORMAT_OPTIONS) -o "$@"
 
 %.html: %.md
