@@ -2,7 +2,7 @@ FILES = $(patsubst %.md, %.docx, $(wildcard *.md))
 FILES += $(patsubst %.md, %.pdf, $(wildcard *.md))
 
 FILTERS =
-OPTIONS =
+OPTIONS = --verbose
 PDF_ENGINE =
 PDF_OPTIONS =
 FORMAT_OPTIONS =

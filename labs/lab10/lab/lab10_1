@@ -1,0 +1,2 @@
+tar cvf lab10_1.tar lab10_1
+mv lab10_1.tar ~/backup

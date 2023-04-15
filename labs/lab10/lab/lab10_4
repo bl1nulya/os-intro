@@ -1,0 +1,5 @@
+echo "input directory"
+read dir
+echo "input format"
+read format
+find ${dir} -maxdepth 1 -name "*${type}" -type f | wc -l
